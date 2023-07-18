@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Codewars {
     public static void main(String[] args) {
         String[] arr = {"посмотри", "слева", "справа", "сзади"};
@@ -6,8 +8,8 @@ public class Codewars {
         String str = "hello";
         System.out.println(remove(str));
 
-        int[] array = {1,2,3,6,5};
-        System.out.println(findAverage(array));
+        int[] array = {1,-2,3,-6,5};
+        System.out.println(Arrays.toString(invert(array)));
     }
 
     //Напишите функцию, которая принимает массив слов, объединяет их в предложение и возвращает это предложение.
@@ -35,5 +37,16 @@ public class Codewars {
         double avg = sum / size;
         return avg;
     }
-}
+
+
+    // Учитывая набор чисел, верните аддитивное значение,
+    // обратное каждому из них. Каждое положительное становится отрицательным,
+    // а отрицательное становится положительным.
+    public static int[] invert(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+                array[i] = array[i] * -1;
+            } return array;
+        }
+    }
+
 
