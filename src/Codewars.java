@@ -10,6 +10,8 @@ public class Codewars {
 
         int[] array = {1,-2,3,-6,5};
         System.out.println(Arrays.toString(invert(array)));
+
+        System.out.println(paperWork(5,5));
     }
 
     //Напишите функцию, которая принимает массив слов, объединяет их в предложение и возвращает это предложение.
@@ -47,6 +49,17 @@ public class Codewars {
                 array[i] = array[i] * -1;
             } return array;
         }
+
+
+    /*Ваши одноклассники попросили вас скопировать для них кое-какие документы.
+    Вы знаете, что есть "n" одноклассников, а в документах есть "m" страниц.
+    Ваша задача - подсчитать, скольк страниц вам нужно. Если n < 0 или m < 0, верните 0.*/
+    public static int paperWork(int n, int m) {
+        int paperwork = n * m;
+        if (n < 0 || m < 0) {
+            return 0;
+        } return paperwork;
+    }
     }
 
 
