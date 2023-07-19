@@ -12,6 +12,8 @@ public class Codewars {
         System.out.println(Arrays.toString(invert(array)));
 
         System.out.println(paperWork(5,5));
+
+        System.out.println(areaOrPerimeter(3,3));
     }
 
     //Напишите функцию, которая принимает массив слов, объединяет их в предложение и возвращает это предложение.
@@ -60,6 +62,21 @@ public class Codewars {
             return 0;
         } return paperwork;
     }
+
+
+    /*Вам заданы длина и ширина 4-стороннего многоугольника.
+    Многоугольник может быть либо прямоугольником, либо квадратом.
+    Если это квадрат, верните его площадь.
+    Если это прямоугольник, верните его периметр.*/
+    public static int areaOrPerimeter (int l, int w) {
+        int p = 0;
+        if (l > w || w > l) {
+            p = 2 * (w + l);
+        } else if ( w == l) {
+            p = w * l;
+        }return p;
     }
+
+}
 
 
