@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+
 public class Codewars {
     public static void main(String[] args) {
         String[] arr = {"посмотри", "слева", "справа", "сзади"};
@@ -14,7 +15,11 @@ public class Codewars {
         System.out.println(paperWork(5,5));
 
         System.out.println(areaOrPerimeter(3,3));
+
+        int[] numbers = {1,2,3,6,5};
+        System.out.println(sum(numbers));
     }
+
 
     //Напишите функцию, которая принимает массив слов, объединяет их в предложение и возвращает это предложение.
     public static String smash(String[] words) {
@@ -77,6 +82,18 @@ public class Codewars {
         }return p;
     }
 
+
+// Суммируйте все числа данного массива, кроме самого высокого и самого низкого элемента
+    public static int sum(int[] numbers) {
+        Arrays.sort(numbers);
+        int[] result = new int[numbers.length - 2];
+        System.arraycopy(numbers, 1, result, 0, numbers.length - 2);
+        int sum = 0;
+        for (int i = 0; i < result.length; i++) {
+            sum = sum + result[i];
+        }
+        return sum;
+    }
 }
 
 
