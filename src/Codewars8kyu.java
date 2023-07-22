@@ -18,6 +18,8 @@ public class Codewars8kyu {
 
         int[] numbers = {1,2,3,6,5};
         System.out.println(sum(numbers));
+
+        System.out.println(sumArr(array));
     }
 
 
@@ -93,6 +95,24 @@ public class Codewars8kyu {
             sum = sum + result[i];
         }
         return sum;
+    }
+
+
+    /*напишите метод, который преобразовывает число в строку*/
+    public static String numberToString(int num) {
+        String str = Integer.toString(num);
+        return str;
+    }
+
+
+    /*найди сумму всех положительных чисел в массиве*/
+    public static int sumArr(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] > 0) {
+                sum = sum + arr[i];
+            }
+        } return sum;
     }
 }
 
