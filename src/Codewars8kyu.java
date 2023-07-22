@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 
-public class Codewars {
+public class Codewars8kyu {
     public static void main(String[] args) {
         String[] arr = {"посмотри", "слева", "справа", "сзади"};
         smash(arr);
