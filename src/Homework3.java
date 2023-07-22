@@ -10,7 +10,10 @@ public class Homework3 {
 //        fillDiagonal();
 //        findMinMax();
 //        createAndFillArray();
-        retLenArr(5,0);
+//        retLenArr(5,0);
+        System.out.println(isLeapYear(2015));
+
+
 
     }
         // Задать целочисленный массив,
@@ -101,4 +104,21 @@ public class Homework3 {
         }
 
 
+        /*Написать метод, который определяет, является ли год високосным,
+        и возвращает boolean (високосный - true, не високосный - false).
+        Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.*/
+        public static boolean isLeapYear(int year) {
+            if (year %100==0 && year %400 ==0 ) {
+                return true;
+            }
+            else if (year % 4 == 0 && year % 100 > 0) {
+                return true;
+            }
+            else if (year % 100 == 0) {
+                return false;
+            }
+            else {
+                return false;
+            }
+        }
 }
