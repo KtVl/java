@@ -20,6 +20,11 @@ public class Codewars8kyu {
         System.out.println(sum(numbers));
 
         System.out.println(sumArr(array));
+
+        System.out.println("---------");
+
+        System.out.println(sumMul(5,20));
+
     }
 
 
@@ -111,6 +116,20 @@ public class Codewars8kyu {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] > 0) {
                 sum = sum + arr[i];
+            }
+        } return sum;
+    }
+
+    /*Найдите сумму всех кратных n ниже m.
+    если m или n <=0 бросить исключение IllegalArgumentException*/
+    public static long sumMul(int n, int m) throws IllegalArgumentException {
+        if (n <= 0 || m <= 0) {
+            throw new IllegalArgumentException();
+        }
+        int sum = 0;
+        for (int i = 0; i < m; i++) {
+            if(i % n == 0){
+                sum += i;
             }
         } return sum;
     }
