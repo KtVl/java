@@ -25,6 +25,11 @@ public class Codewars8kyu {
 
         System.out.println(sumMul(5,20));
 
+        System.out.println(updateLight("red"));
+
+        System.out.println(Arrays.toString(minMax(numbers)));
+
+        System.out.println(Arrays.toString(map(numbers)));
     }
 
 
@@ -132,6 +137,35 @@ public class Codewars8kyu {
                 sum += i;
             }
         } return sum;
+    }
+
+    // Учитывая массив целых чисел, вернуть новый массив с удвоением каждого значения
+    public static int[] map(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = 2 * arr[i];
+        }
+        return arr;
+    }
+
+    //Напишите функцию, которая возвращает минимальное и максимальное количество заданного списка/массива
+    //[1,2,3,4,5] --> [1,5]
+    //[2334454,5] --> [5,2334454]
+    //[1]         --> [1,1]
+    public static int[] minMax(int[] arr) {
+        Arrays.sort(arr);
+        return new int[]{arr[0],arr[arr.length-1]};
+    }
+
+    //Вы пишете код для управления светофорами в вашем городе.
+    // Вам нужна функция для обработки каждого изменения с green,
+    // на yellow, на red, а затем green снова
+    public static String updateLight(String current) {
+        switch (current) {
+            case "red": return "green";
+            case "yellow": return "red";
+            case "green": return "yellow";
+            default: throw new IllegalArgumentException();
+        }
     }
 }
 
