@@ -4,6 +4,7 @@ public class FibonacciNumbers {
     public static void main(String[] args) {
         System.out.println(fibonacci(10));
         System.out.println(Arrays.toString(fibonacciArr(10)));
+        System.out.println(sumFibonacci(10));
     }
 
     public static String fibonacci(int numbers) {
@@ -25,6 +26,13 @@ public class FibonacciNumbers {
         for (int i = 2; i < arr.length; ++i) {
             arr[i] = arr[i - 1] + arr[i - 2];
         } return arr;
+    }
+
+    //сумма чисел в последовательности Фибоначчи
+
+    public static int sumFibonacci(int max) {
+        int sum = Arrays.stream(fibonacciArr(max)).sum();
+        return sum;
     }
 }
 
