@@ -22,6 +22,10 @@ public class TasksWithNumbersOfCodewars8kyu {
         System.out.println(Arrays.toString(minMax(numbers)));
 
         System.out.println(Arrays.toString(map(numbers)));
+
+        System.out.println("---------");
+
+        System.out.println(noBoringZeros(1050));
     }
 
     // Напишите функцию, которая вычисляет среднее значение чисел в заданном списке.
@@ -124,6 +128,18 @@ public class TasksWithNumbersOfCodewars8kyu {
     public static int[] minMax(int[] arr) {
         Arrays.sort(arr);
         return new int[]{arr[0],arr[arr.length-1]};
+    }
+
+    // Избавься от нулей в конце.
+    //1450 -> 145
+    //960000 -> 96
+    //1050 -> 105
+    //-1050 -> -105
+    public static int noBoringZeros(int n) {
+         while (n%10 == 0){
+             n = n / 10;
+         }
+        return n;
     }
 }
 
