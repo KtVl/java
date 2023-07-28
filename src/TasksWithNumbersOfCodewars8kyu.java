@@ -1,14 +1,8 @@
 import java.util.Arrays;
 
 
-public class Codewars8kyu {
+public class TasksWithNumbersOfCodewars8kyu {
     public static void main(String[] args) {
-        String[] arr = {"посмотри", "слева", "справа", "сзади"};
-        smash(arr);
-
-        String str = "hello";
-        System.out.println(remove(str));
-
         int[] array = {1,-2,3,-6,5};
         System.out.println(Arrays.toString(invert(array)));
 
@@ -25,28 +19,10 @@ public class Codewars8kyu {
 
         System.out.println(sumMul(5,20));
 
-        System.out.println(updateLight("red"));
-
         System.out.println(Arrays.toString(minMax(numbers)));
 
         System.out.println(Arrays.toString(map(numbers)));
     }
-
-
-    //Напишите функцию, которая принимает массив слов, объединяет их в предложение и возвращает это предложение.
-    public static String smash(String[] words) {
-        String arrayToString = String.join(" ", words);
-        System.out.println(arrayToString);
-        return arrayToString;
-    }
-
-
-    // создать функцию, которая удаляет первый и последний символы строки
-    public static String remove(String str) {
-        String str2 = str.substring(1, str.length() - 1);
-        return str2;
-    }
-
 
     // Напишите функцию, которая вычисляет среднее значение чисел в заданном списке.
     public static double findAverage(int[] array) {
@@ -59,7 +35,6 @@ public class Codewars8kyu {
         return avg;
     }
 
-
     // Учитывая набор чисел, верните аддитивное значение,
     // обратное каждому из них. Каждое положительное становится отрицательным,
     // а отрицательное становится положительным.
@@ -68,7 +43,6 @@ public class Codewars8kyu {
                 array[i] = array[i] * -1;
             } return array;
         }
-
 
     /*Ваши одноклассники попросили вас скопировать для них кое-какие документы.
     Вы знаете, что есть "n" одноклассников, а в документах есть "m" страниц.
@@ -79,7 +53,6 @@ public class Codewars8kyu {
             return 0;
         } return paperwork;
     }
-
 
     /*Вам заданы длина и ширина 4-стороннего многоугольника.
     Многоугольник может быть либо прямоугольником, либо квадратом.
@@ -94,8 +67,7 @@ public class Codewars8kyu {
         }return p;
     }
 
-
-// Суммируйте все числа данного массива, кроме самого высокого и самого низкого элемента
+    // Суммируйте все числа данного массива, кроме самого высокого и самого низкого элемента
     public static int sum(int[] numbers) {
         Arrays.sort(numbers);
         int[] result = new int[numbers.length - 2];
@@ -107,13 +79,11 @@ public class Codewars8kyu {
         return sum;
     }
 
-
     /*напишите метод, который преобразовывает число в строку*/
     public static String numberToString(int num) {
         String str = Integer.toString(num);
         return str;
     }
-
 
     /*найди сумму всех положительных чисел в массиве*/
     public static int sumArr(int[] arr) {
@@ -154,18 +124,6 @@ public class Codewars8kyu {
     public static int[] minMax(int[] arr) {
         Arrays.sort(arr);
         return new int[]{arr[0],arr[arr.length-1]};
-    }
-
-    //Вы пишете код для управления светофорами в вашем городе.
-    // Вам нужна функция для обработки каждого изменения с green,
-    // на yellow, на red, а затем green снова
-    public static String updateLight(String current) {
-        switch (current) {
-            case "red": return "green";
-            case "yellow": return "red";
-            case "green": return "yellow";
-            default: throw new IllegalArgumentException();
-        }
     }
 }
 
