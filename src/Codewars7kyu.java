@@ -6,6 +6,8 @@ public class Codewars7kyu {
         System.out.println(betterThanAverage(array,2));
 
         System.out.println(switcheroo("aabbcc"));
+
+        System.out.print(delimitedWord("hello", "!", 3));
     }
 
     /*Вы получаете массив с результатами тестов ваших сверстников.
@@ -39,5 +41,13 @@ public class Codewars7kyu {
     /*Дана строка, состоящая из букв a, b и/или c, поменяйте местами буквы a и b (замените a на b и наоборот).*/
     public static String switcheroo(String x) {
         return x.replace('a','0').replace('b','a').replace('0','b');
+    }
+
+    //вывести слово повторенное число раз с разделителем из второго параметра
+    public static String delimitedWord(String str, String separator, int num) {
+        String newStr = new String();
+        for (int i = 0; i < num; i++){
+            newStr += str + separator;
+        } return newStr;
     }
 }
