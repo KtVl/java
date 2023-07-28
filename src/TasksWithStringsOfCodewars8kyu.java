@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class TasksWithStringsOfCodewars8kyu {
     public static void main(String[] args) {
         System.out.println(position("a"));
@@ -9,6 +11,8 @@ public class TasksWithStringsOfCodewars8kyu {
         System.out.println(remove(str));
 
         System.out.println(updateLight("red"));
+
+        System.out.println(greet("german"));
     }
 
     // Получив букву, верните ее положение в алфавите.
@@ -43,5 +47,32 @@ public class TasksWithStringsOfCodewars8kyu {
             case "green": return "yellow";
             default: throw new IllegalArgumentException();
         }
+    }
+
+    //Напишите функцию «приветствия», которая принимает параметр «язык»
+    // (всегда строка) и возвращает приветствие, если оно есть в вашей базе данных.
+    // По умолчанию должен быть английский, если языка нет в базе данных или в случае неверного ввода
+    public static String greet(String language){
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("english", "Welcome");
+        map.put("czech", "Vitejte");
+        map.put("danish", "Velkomst");
+        map.put("dutch", "Welkom");
+        map.put("estonian", "Tere tulemast");
+        map.put("finnish", "Tervetuloa");
+        map.put("flemish", "Welgekomen");
+        map.put("french", "Bienvenue");
+        map.put("german", "Willkommen");
+        map.put("irish", "Failte");
+        map.put("italian", "Benvenuto");
+        map.put("latvian", "Gaidits");
+        map.put("lithuanian", "Laukiamas");
+        map.put("polish", "Witamy");
+        map.put("spanish", "Bienvenido");
+        map.put("swedish", "Valkommen");
+        map.put("welsh", "Croeso");
+
+        return map.getOrDefault(language, map.get("english"));
     }
 }
