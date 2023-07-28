@@ -13,6 +13,8 @@ public class TasksWithStringsOfCodewars8kyu {
         System.out.println(updateLight("red"));
 
         System.out.println(greet("german"));
+
+        System.out.println(validatePin("1234"));
     }
 
     // Получив букву, верните ее положение в алфавите.
@@ -74,5 +76,27 @@ public class TasksWithStringsOfCodewars8kyu {
         map.put("welsh", "Croeso");
 
         return map.getOrDefault(language, map.get("english"));
+    }
+
+    /*Банкоматы позволяют использовать 4- или 6-значные PIN-коды,
+    а PIN-коды не могут содержать ничего, кроме ровно 4 или ровно 6 цифр.
+    Если функции передана допустимая строка PIN-кода, верните true, иначе верните false.
+    Примеры ( Ввод --> Вывод)
+    "1234"   -->  true
+    "12345"  -->  false
+    "a234"   -->  false*/
+    public static boolean validatePin(String pin) {
+        //Чтобы проверить все ли символы цифры
+        boolean isOnlyDigits = true;
+        for(int i = 0; i < pin.length() && isOnlyDigits; i++) {
+            if(!Character.isDigit(pin.charAt(i))) {
+                isOnlyDigits = false;
+            }
+        }
+        if (isOnlyDigits == true) {
+            if(pin.length() == 4 || pin.length() == 6) {
+                return true;
+            }
+        } return false;
     }
 }
