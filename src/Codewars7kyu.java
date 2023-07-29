@@ -3,11 +3,14 @@ import java.util.Arrays;
 public class Codewars7kyu {
     public static void main(String[] args) {
         int[] array = {3,2,3,4,5};
-        System.out.println(betterThanAverage(array,2));
+        //System.out.println(betterThanAverage(array,2));
 
-        System.out.println(switcheroo("aabbcc"));
+        //System.out.println(switcheroo("aabbcc"));
 
-        System.out.print(delimitedWord("hello", "!", 3));
+        //System.out.print(delimitedWord("hello", "!", 3));
+
+        System.out.println(reverseWords("This is an example!"));
+
     }
 
     /*Вы получаете массив с результатами тестов ваших сверстников.
@@ -50,4 +53,19 @@ public class Codewars7kyu {
             newStr += str + separator;
         } return newStr;
     }
+
+    /*напишите функцию, которая принимает строковый параметр и переворачивает каждое слово в строке.
+    Все пробелы в строке должны быть сохранены.
+    Примеры
+    "This is an example!" ==> "sihT si na !elpmaxe"
+    "double  spaces"      ==> "elbuod  secaps"*/
+    public static String reverseWords(final String original) {
+        String[] words = new StringBuilder(original).reverse().toString().split(" ");
+        StringBuilder newStr = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--)
+            newStr.append(words[i]).append(" ");
+        String str = newStr.toString();
+        return str;
+    }
+
 }
