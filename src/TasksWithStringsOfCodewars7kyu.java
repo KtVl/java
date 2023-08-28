@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 public class TasksWithStringsOfCodewars7kyu {
     public static void main(String[] args) {
         System.out.println(switcheroo("aabbcc"));
         System.out.print(delimitedWord("hello", "!", 3));
         System.out.println(reverseWords("This is an example!"));
+        System.out.println(highAndLow("6 5 3 1 9"));
     }
 
     /*Дана строка, состоящая из букв a, b и/или c, поменяйте местами буквы a и b (замените a на b и наоборот).*/
@@ -30,5 +33,16 @@ public class TasksWithStringsOfCodewars7kyu {
             newStr.append(words[i]).append(" ");
         String str = newStr.toString();
         return str;
+    }
+
+    //вам дается строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.
+    public static String highAndLow(String numbers) {
+        String[] stringsArr = numbers.split(" ");
+        int[] numbersArr = new int[stringsArr.length];
+        for (int i = 0; i < stringsArr.length; i++) {
+            numbersArr[i] = Integer.parseInt(stringsArr[i]);
+        }
+        Arrays.sort(numbersArr);
+        return numbersArr[numbersArr.length-1] + " " + numbersArr[0];
     }
 }
